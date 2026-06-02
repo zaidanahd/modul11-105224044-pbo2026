@@ -18,8 +18,9 @@ public class Kasir {
                 scanner.next();
             } catch (ArrayIndexOutOfBoundsException e) {
                 System.out.println("Error: Kapasitas memori harga sudah penuh!");
+            } finally {
+                System.out.println("program selesai!");
             }
         }
-        scanner.close();
     }
 }

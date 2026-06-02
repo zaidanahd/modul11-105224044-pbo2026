@@ -1,6 +1,23 @@
 class Pelanggan {
     private String nama;
     private int Umur;
+    private int stokKopi; 
+
+    Pelanggan() {
+        this.stokKopi = 5; 
+    }
+
+     public int getStokKopi() {
+        return stokKopi;
+    }
+
+    public void pesanKopi(int jumlahPesanan) {
+        if (jumlahPesanan > stokKopi) {
+            throw new KopiHabisException("Maaf, stok kopi habis!");
+        } else {
+            stokKopi -= jumlahPesanan;
+        }
+    }
 
     public String getnama(){
         return nama;
@@ -20,15 +37,5 @@ class Pelanggan {
         } else {
             this.Umur = Umur;
         }
-    }
-
-    public void daftarmember(int i) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'daftarmember'");
-    }
-
-    public void pesanKopi(int i) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'pesanKopi'");
     }
 }
