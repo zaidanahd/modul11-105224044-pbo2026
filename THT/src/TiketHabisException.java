@@ -2,7 +2,8 @@ public class TiketHabisException extends Exception {
     private String namaKereta;
     private int SisaKursi;
 
-    public TiketHabisException(String namaKereta, String string, int SisaKursi) {
+    public TiketHabisException(String namaKereta, String message, int SisaKursi) {
+        super(message);
         this.namaKereta = namaKereta;
         this.SisaKursi = SisaKursi;
     }
